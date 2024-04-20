@@ -28,10 +28,12 @@
 		2CD8A92D2BD10D5800A87CCE /* SnapshotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A92C2BD10D5800A87CCE /* SnapshotView.swift */; };
 		2CD8A9322BD10E4700A87CCE /* ArchiveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A9312BD10E4700A87CCE /* ArchiveView.swift */; };
 		2CD8A9342BD10F0400A87CCE /* SavedWorkoutListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A9332BD10F0400A87CCE /* SavedWorkoutListView.swift */; };
+		2CD8A9382BD38FE800A87CCE /* ActivityRingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CD8A9372BD38FE800A87CCE /* ActivityRingView.swift */; };
 		2CEDF5402BCCF8A80039027C /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEDF53F2BCCF8A80039027C /* Health.swift */; };
 		2CEDF5432BCCFC510039027C /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEDF5422BCCFC510039027C /* MainView.swift */; };
 		2CEDF5452BCD07270039027C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CEDF5442BCD07270039027C /* MainViewModel.swift */; };
 		2CF22ADE2BCEB0870007CDA0 /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF22ADD2BCEB0870007CDA0 /* AlbumView.swift */; };
+		2CFB93302BD3A48A008E8547 /* RingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB932F2BD3A48A008E8547 /* RingViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,10 +59,12 @@
 		2CD8A92C2BD10D5800A87CCE /* SnapshotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotView.swift; sourceTree = "<group>"; };
 		2CD8A9312BD10E4700A87CCE /* ArchiveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArchiveView.swift; sourceTree = "<group>"; };
 		2CD8A9332BD10F0400A87CCE /* SavedWorkoutListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutListView.swift; sourceTree = "<group>"; };
+		2CD8A9372BD38FE800A87CCE /* ActivityRingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityRingView.swift; sourceTree = "<group>"; };
 		2CEDF53F2BCCF8A80039027C /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		2CEDF5422BCCFC510039027C /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		2CEDF5442BCD07270039027C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2CF22ADD2BCEB0870007CDA0 /* AlbumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		2CFB932F2BD3A48A008E8547 /* RingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +95,7 @@
 			children = (
 				2CEDF5442BCD07270039027C /* MainViewModel.swift */,
 				2C386AB72BCE4AE4004D912B /* MapViewModel.swift */,
+				2CFB932F2BD3A48A008E8547 /* RingViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -178,6 +183,7 @@
 				2CEDF5422BCCFC510039027C /* MainView.swift */,
 				2CD8A9312BD10E4700A87CCE /* ArchiveView.swift */,
 				2CD8A9332BD10F0400A87CCE /* SavedWorkoutListView.swift */,
+				2CD8A9372BD38FE800A87CCE /* ActivityRingView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -284,6 +290,7 @@
 				2CD8A92D2BD10D5800A87CCE /* SnapshotView.swift in Sources */,
 				2C386AAD2BCE37EE004D912B /* WorkoutDetailView.swift in Sources */,
 				2C386AB22BCE4712004D912B /* DetailFirstTextModifier.swift in Sources */,
+				2CD8A9382BD38FE800A87CCE /* ActivityRingView.swift in Sources */,
 				2C386AAB2BCE3743004D912B /* ArchiveModel.swift in Sources */,
 				2CF22ADE2BCEB0870007CDA0 /* AlbumView.swift in Sources */,
 				2CEDF5452BCD07270039027C /* MainViewModel.swift in Sources */,
@@ -297,6 +304,7 @@
 				2CD8A9342BD10F0400A87CCE /* SavedWorkoutListView.swift in Sources */,
 				2CEDF5432BCCFC510039027C /* MainView.swift in Sources */,
 				2CD8A9272BD10C7400A87CCE /* AlbumMonthView.swift in Sources */,
+				2CFB93302BD3A48A008E8547 /* RingViewModel.swift in Sources */,
 				2C386AB62BCE49AA004D912B /* WorkoutDetailMapView.swift in Sources */,
 				2C386AB42BCE4783004D912B /* DetailSecondTextModifier.swift in Sources */,
 				2CB7E5AB2BCE5825003E99C6 /* HealthDataExtension.swift in Sources */,

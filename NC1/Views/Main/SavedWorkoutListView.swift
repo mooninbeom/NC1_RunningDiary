@@ -10,6 +10,7 @@ import HealthKit
 
 
 struct SavedWorkoutListView: View {
+    @State var ringView = ActivityRingView()
     let workout: HKWorkout
     let textColor: Color = Color(red: 1, green: 80/255, blue: 80/255)
     
@@ -18,7 +19,7 @@ struct SavedWorkoutListView: View {
         VStack {
             HStack {
                 Image(systemName: "flame.fill")
-                // 수정 point
+
                 Text(getDate())
                     .font(.system(size: 20, weight: .semibold))
                 
@@ -33,8 +34,15 @@ struct SavedWorkoutListView: View {
                     .foregroundStyle(.white)
                 
                 HStack(spacing: 15) {
-                    Circle()
-                        .frame(width: 60)
+                    switch ringView.ringViewModel.modelStatus {
+                    case .loading:
+                        ProgressView()
+                    case .success:
+                        ringView
+                            .frame(width: 60, height: 60)
+                    case .failure:
+                        EmptyView()
+                    }
                     
                     Image(systemName: "figure.run")
                         .resizable()
@@ -42,7 +50,7 @@ struct SavedWorkoutListView: View {
                         .frame(width: 30)
                     
                     VStack(alignment: .leading) {
-                        // 수정 point
+                        
                         Label(
                             title: { Text(getDistance()) },
                             icon: { Image(systemName: "ruler") }
@@ -66,6 +74,9 @@ struct SavedWorkoutListView: View {
                         .foregroundStyle(Color(red: 254/255, green: 98/255, blue: 98/255))
                 }
                 .padding(.horizontal, 25)
+            }
+            .task {
+                await ringView.ringViewModel.fetchActivityRing(workout: self.workout)
             }
         }
     }

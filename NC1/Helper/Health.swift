@@ -15,11 +15,11 @@ struct Health {
     
     let store = HKHealthStore()
     
-    let allTypes: Set<HKSampleType> = [
+    let allTypes = Set([
         HKQuantityType.workoutType(),
-        HKSampleType.workoutType(),
-        HKSeriesType.workoutRoute()
-    ]
+        HKSeriesType.workoutRoute(),
+        HKObjectType.activitySummaryType()
+    ])
     
 }
 
@@ -30,7 +30,7 @@ extension Health {
     func requestAuthorization() async {
         do {
             if HKHealthStore.isHealthDataAvailable() {
-                try await store.requestAuthorization(toShare: allTypes, read: allTypes)
+                try await store.requestAuthorization(toShare: Set(), read: allTypes)
             }
         } catch {
             print("건강 정보 허용 실패 \(error.localizedDescription)")
@@ -148,8 +148,8 @@ extension Health {
     }
     
     
-    // 일단 사용 x
-    public func getActivitySummary(date: DateComponents) async -> UIView {
+    // Activity summary 데이터를 받아와 HKActivityRingView로 반환
+    public func getActivitySummary(date: DateComponents) async -> HKActivityRingView {
         let predicate = HKQuery.predicateForActivitySummary(with: date)
         
         do {
